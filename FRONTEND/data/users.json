@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@studystack.com",
+      "password": "admin123"
+    },
+    {
+      "username": "randhawa",
+      "email": "randhawauday2005@gmail.com",
+      "password": "Randhawa@12345",
+      "id": 2
+    },
+    {
+      "username": "uday",
+      "email": "udaysingh@gmail.com",
+      "password": "Uday@12345",
+      "id": 3
+    },
+    {
+      "username": "sandhu",
+      "email": "sandhu@gmail.com",
+      "password": "Sandhu@12345",
+      "id": 4
+    },
+    {
+      "username": "Nishank_123",
+      "email": "randhaway2005@gmail.com",
+      "password": "Nishank@123",
+      "id": 5
+    },
+    {
+      "username": "sukhbir",
+      "email": "sukhbir90@gmail.com",
+      "password": "Dhakansu@123",
+      "id": 6
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "title": "Learn React Hooks",
+      "description": "Master useState, useEffect, and other React hooks",
+      "status": "pending",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Build a Todo App",
+      "description": "Create a todo application using React",
+      "status": "completed",
+      "userId": 1
+    }
+  ]
+}

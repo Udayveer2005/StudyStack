@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "email": "admin@studystack.com",
+    "password": "admin123"
+  },
+  {
+    "id": 2,
+    "username": "itachi",
+    "email": "itachiuchiha@gmail.com",
+    "password": "Sharingan@12345"
+  },
+  {
+    "id": 3,
+    "username": "Samarjeet Singh",
+    "email": "samarjeet0755.becse24@chitkara.edu.in",
+    "password": "Samar2007$"
+  }
+]

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <% const title = "SSR Home"; %>
+    <%- include("../partials/head", { title }) %>
+  </head>
+  <body>
+    <%- include("../partials/nav", { now }) %>
+    <div class="wrap">
+      <div class="card">
+        <h2 style="margin-top: 0;">SSR Home</h2>
+        <p class="muted">This HTML was rendered on the server with EJS, including the featured course list below.</p>
+      </div>
+
+      <div style="height: 12px;"></div>
+
+      <div class="grid">
+        <% (featured || []).forEach(function(c) { %>
+          <div class="card">
+            <div><strong><%= c.title %></strong></div>
+            <div class="muted"><%= c.category %> • $<%= c.price %> • <%= c.level || "—" %></div>
+          </div>
+        <% }) %>
+      </div>
+
+      <div style="height: 12px;"></div>
+
+      <div class="card">
+        <div class="row">
+          <a href="/csr-demo">Go to CSR demo</a>
+          <span class="muted">|</span>
+          <a href="/ssr/dashboard">See session persistence</a>
+        </div>
+      </div>
+    </div>
+    <%- include("../partials/footer") %>
+  </body>
+</html>
+

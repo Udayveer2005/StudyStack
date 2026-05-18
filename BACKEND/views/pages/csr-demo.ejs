@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <% const title = "CSR Demo"; %>
+    <%- include("../partials/head", { title }) %>
+  </head>
+  <body>
+    <%- include("../partials/nav", { now }) %>
+    <div class="wrap">
+      <div class="card">
+        <h2 style="margin-top: 0;">CSR Demo</h2>
+        <p class="muted">
+          This page is server-rendered as a shell, but the course list below is rendered by client-side JavaScript after fetching `/courses`.
+        </p>
+      </div>
+
+      <div style="height: 12px;"></div>
+
+      <div id="courses" class="grid"></div>
+    </div>
+
+    <script>
+      (async function () {
+        const el = document.getElementById('courses');
+        el.innerHTML = '<div class="card">Loading courses...</div>';
+        try {
+          const res = await fetch('/courses?limit=6');
+          const data = await res.json();
+          el.innerHTML = '';
+          (data || []).forEach(function (c) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = '<div><strong>' + (c.title || '') + '</strong></div>' +
+              '<div class="muted">' + (c.category || '') + ' • $' + (c.price || 0) + '</div>';
+            el.appendChild(card);
+          });
+        } catch (e) {
+          el.innerHTML = '<div class="card">Failed to load.</div>';
+        }
+      })();
+    </script>
+
+    <%- include("../partials/footer") %>
+  </body>
+</html>
+

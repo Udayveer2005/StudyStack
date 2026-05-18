@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Learn React Hooks",
+    "description": "Master useState, useEffect, and other React hooks",
+    "status": "pending",
+    "userId": 1
+  },
+  {
+    "id": 2,
+    "title": "Build a Todo App",
+    "description": "Create a todo application using React",
+    "status": "completed",
+    "userId": 1
+  }
+]

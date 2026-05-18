@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+BACKEND/node_modules/
+FRONTEND/node_modules/
+
+# Environment variables (secrets!)
+.env
+BACKEND/.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <% const title = "SSR Login"; %>
+    <%- include("../partials/head", { title }) %>
+  </head>
+  <body>
+    <%- include("../partials/nav", { now }) %>
+    <div class="wrap">
+      <div class="card">
+        <h2 style="margin-top: 0;">SSR Login</h2>
+        <p class="muted">This form is server-rendered. Submit will call the backend login endpoint and set session + cookies.</p>
+
+        <form method="post" action="/auth/login" class="row" style="margin-top: 12px;">
+          <input name="username" placeholder="username" />
+          <input name="password" placeholder="password" type="password" />
+          <button type="submit">Login</button>
+        </form>
+
+        <p class="muted" style="margin-top: 10px;">
+          Tip: register first via API `POST /auth/register` or `POST /register`.
+        </p>
+      </div>
+    </div>
+    <%- include("../partials/footer") %>
+  </body>
+</html>
+

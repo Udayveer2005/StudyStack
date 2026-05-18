@@ -1,0 +1,198 @@
+.dashboard-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-container {
+  width: 100%;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.dashboard-title {
+  font-size: 2.1rem;
+  color: #333;
+  margin: 0;
+  font-weight: 700;
+}
+
+.dashboard-subtitle {
+  font-size: 1.6rem;
+  color: #333;
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+
+.btn-add {
+  padding: 12px 30px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #fcc;
+  text-align: center;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-enrolled-section {
+  margin-bottom: 10px;
+}
+
+.enrolled-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.enrolled-course-card {
+  background: #fff;
+  border: 1px solid #e8ecf2;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 180px;
+}
+
+.enrolled-course-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.enrolled-course-meta {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.enrolled-course-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.enrolled-course-price {
+  font-weight: 700;
+  color: #111827;
+}
+
+.dashboard-tests-section {
+  margin-bottom: 10px;
+}
+
+.dashboard-tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-test-card {
+  background: #fff;
+  border: 1px solid #e8ecf2;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 190px;
+}
+
+.dashboard-test-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.dashboard-test-meta {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 1.35rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+
+  .dashboard-container {
+    padding: 18px;
+  }
+
+  .enrolled-course-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

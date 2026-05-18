@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Johnson",
+    "role": "Computer Science Student",
+    "image": "/images/person-1.jpg",
+    "text": "StudyStack has transformed how I organize my learning. The dashboard keeps me focused and motivated!"
+  },
+  {
+    "id": 2,
+    "name": "Michael Chen",
+    "role": "Software Developer",
+    "image": "/images/person-2.jpg",
+    "text": "The course content is comprehensive and well-structured. Highly recommend for anyone learning Java frameworks."
+  },
+  {
+    "id": 3,
+    "name": "Emily Rodriguez",
+    "role": "Web Developer",
+    "image": "/images/person-3.jpg",
+    "text": "Love the clean interface and easy-to-use features. It's become an essential part of my learning routine."
+  }
+]

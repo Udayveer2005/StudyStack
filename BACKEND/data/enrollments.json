@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "userId": 2,
+    "courseId": 1,
+    "enrolledAt": "2026-03-01T10:40:52.811Z"
+  },
+  {
+    "id": 2,
+    "userId": 3,
+    "courseId": 5,
+    "enrolledAt": "2026-03-04T12:32:19.965Z"
+  }
+]

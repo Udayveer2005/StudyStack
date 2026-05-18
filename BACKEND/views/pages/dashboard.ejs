@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <% const title = "SSR Dashboard"; %>
+    <%- include("../partials/head", { title }) %>
+  </head>
+  <body>
+    <%- include("../partials/nav", { now }) %>
+    <div class="wrap">
+      <div class="card">
+        <h2 style="margin-top: 0;">SSR Dashboard</h2>
+        <p class="muted">This page shows your current server session object (persisted in MongoDB).</p>
+        <pre class="card" style="overflow:auto; white-space: pre-wrap;"><%= JSON.stringify(session || {}, null, 2) %></pre>
+        <div class="row">
+          <form method="post" action="/auth/logout">
+            <button type="submit">Logout (clears session + refresh cookie)</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <%- include("../partials/footer") %>
+  </body>
+</html>
+
