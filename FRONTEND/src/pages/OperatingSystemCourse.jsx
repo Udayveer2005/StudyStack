@@ -5,7 +5,8 @@ import {
   enrollUser,
   getEnrollments,
   getProgress,
-  saveProgress
+  saveProgress,
+  API_BASE
 } from '../api/api';
 import './OperatingSystemCourse.css';
 
@@ -266,7 +267,7 @@ function OperatingSystemCourse({ navigateTo }) {
                         onEnded={() => handleMarkCompleted(selectedLecture.id)}
                       >
                         <source
-                          src={selectedLecture.videoUrl}
+                          src={selectedLecture.videoUrl?.startsWith('/') ? `${API_BASE}${selectedLecture.videoUrl}` : selectedLecture.videoUrl}
                           type="video/mp4"
                         />
                         Your browser does not support the video tag.

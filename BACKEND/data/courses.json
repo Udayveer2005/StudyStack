@@ -30,37 +30,37 @@
       {
         "id": 1,
         "title": "React Fundamentals and JSX",
-        "videoUrl": "http://localhost:5001/videos/react/react-lecture-1.mp4",
+        "videoUrl": "/videos/react/react-lecture-1.mp4",
         "duration": "16:50"
       },
       {
         "id": 2,
         "title": "Components, Props, and State",
-        "videoUrl": "http://localhost:5001/videos/react/react-lecture-2.mp4",
+        "videoUrl": "/videos/react/react-lecture-2.mp4",
         "duration": "19:45"
       },
       {
         "id": 3,
         "title": "Handling Events and Forms",
-        "videoUrl": "http://localhost:5001/videos/react/react-lecture-3.mp4",
+        "videoUrl": "/videos/react/react-lecture-3.mp4",
         "duration": "17:12"
       },
       {
         "id": 4,
         "title": "useEffect and Data Fetching",
-        "videoUrl": "http://localhost:5001/videos/react/react-lecture-4.mp4",
+        "videoUrl": "/videos/react/react-lecture-4.mp4",
         "duration": "21:05"
       },
       {
         "id": 5,
         "title": "React Router and Navigation",
-        "videoUrl": "http://localhost:5001/videos/react/react-lecture-5.mp4",
+        "videoUrl": "/videos/react/react-lecture-5.mp4",
         "duration": "16:58"
       },
       {
         "id": 6,
         "title": "State Management Patterns",
-        "videoUrl": "http://localhost:5001/videos/react/react-lecture-6.mp4",
+        "videoUrl": "/videos/react/react-lecture-6.mp4",
         "duration": "18:33"
       }
     ]
@@ -76,37 +76,37 @@
       {
         "id": 1,
         "title": "Introduction to Operating Systems",
-        "videoUrl": "http://localhost:5001/videos/os/os-lecture-1.mp4",
+        "videoUrl": "/videos/os/os-lecture-1.mp4",
         "duration": "13:00"
       },
       {
         "id": 2,
         "title": "Processes and Threads",
-        "videoUrl": "http://localhost:5001/videos/os/os-lecture-2.mp4",
+        "videoUrl": "/videos/os/os-lecture-2.mp4",
         "duration": "18:58"
       },
       {
         "id": 3,
         "title": "CPU Scheduling",
-        "videoUrl": "http://localhost:5001/videos/os/os-lecture-3.mp4",
+        "videoUrl": "/videos/os/os-lecture-3.mp4",
         "duration": "7:11"
       },
       {
         "id": 4,
         "title": "Memory Management",
-        "videoUrl": "http://localhost:5001/videos/os/os-lecture-4.mp4",
+        "videoUrl": "/videos/os/os-lecture-4.mp4",
         "duration": "6:33"
       },
       {
         "id": 5,
         "title": "Virtual Memory and Paging",
-        "videoUrl": "http://localhost:5001/videos/os/os-lecture-5.mp4",
+        "videoUrl": "/videos/os/os-lecture-5.mp4",
         "duration": "8:14"
       },
       {
         "id": 6,
         "title": "File Systems and I/O",
-        "videoUrl": "http://localhost:5001/videos/os/os-lecture-6.mp4",
+        "videoUrl": "/videos/os/os-lecture-6.mp4",
         "duration": "20:53"
       }
     ]

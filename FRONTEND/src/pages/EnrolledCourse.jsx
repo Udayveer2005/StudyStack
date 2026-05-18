@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Layout from '../components/Layout/Layout.jsx';
-import { getCourseById, getProgress, saveProgress } from '../api/api';
+import { getCourseById, getProgress, saveProgress, API_BASE } from '../api/api';
 import './Course.css';
 import './EnrolledCourse.css';
 
@@ -302,7 +302,7 @@ function EnrolledCourse({ navigateTo }) {
                                 controls
                                 onEnded={() => handleMarkCompleted(selectedLesson.id)}
                               >
-                                <source src={selectedLesson.videoUrl} type="video/mp4" />
+                                <source src={selectedLesson.videoUrl?.startsWith('/') ? `${API_BASE}${selectedLesson.videoUrl}` : selectedLesson.videoUrl} type="video/mp4" />
                                 Your browser does not support the video tag.
                               </video>
                             </div>
