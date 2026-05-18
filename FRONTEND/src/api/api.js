@@ -11,7 +11,7 @@
 
 // Base URL of our Node/Express backend. The frontend runs on port 3000, backend on 5001.
 // Changing this constant updates all API calls at once (e.g. for production you might use a different URL).
-const API_BASE = 'http://localhost:5001';
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
 function getAuthHeaders() {
   const token = localStorage.getItem('accessToken');
