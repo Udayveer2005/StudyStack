@@ -40,6 +40,10 @@ const testRoutes = require('./routes/tests');
 const { connectDb } = require('./config/db');
 const { setupSocket } = require('./socket/setupSocket');
 const { seedIfEmpty } = require('./config/seed');
+// ── PostgreSQL (evaluation only — does NOT affect MongoDB or existing routes) ──
+const { connectPg } = require('./config/pg');
+const { setupPgTables, seedPgData } = require('./config/pgSetup');
+const pgEvalRoutes = require('./routes/pgEval');
 
 // ========== Express Application Setup ==========
 // Create the Express app object. This object is used to configure middleware and routes.
@@ -142,6 +146,9 @@ app.use('/progress', progressRoutes);
 // Tests: teacher creates, students attempt, teacher grades
 app.use('/tests', testRoutes);
 
+// PostgreSQL Evaluation routes (independent of MongoDB)
+app.use('/pg', pgEvalRoutes);
+
 // SSR pages (EJS)
 app.use('/', pageRoutes);
 
@@ -181,6 +188,22 @@ app.use(errorHandler);
       console.error('Continuing without MongoDB. Set MONGO_URI and start MongoDB to enable DB-backed routes/sessions.');
     }
   }
+
+  // ── PostgreSQL (evaluation only) ─────────────────────────────────────────
+  if (process.env.PG_CONNECTION_STRING) {
+    try {
+      connectPg();
+      await setupPgTables();
+      await seedPgData();
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('[PostgreSQL] Init error:', err.message);
+    }
+  } else {
+    // eslint-disable-next-line no-console
+    console.warn('[PostgreSQL] PG_CONNECTION_STRING not set — skipping PostgreSQL init.');
+  }
+  // ─────────────────────────────────────────────────────────────────────────
 
   const server = http.createServer(app);
   setupSocket(server);
